@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message for ?? </title>
-</head>
-<body>
-  <div style="text-align: center; padding: 20px;">
-    <h1>To My Dearest [classmates],</h1>
-    <p>
-      hi guys
-    </p>
-    <p>
-      goodnight
-    </p>
-    <p>
-hahahahah    </p>
-    <p>
-      hotdog
-      <br>
-      [ej]
-    </p>
-  </div>
-</body>
-</html>
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+char username[MAX];
+// generate a username
+char correctUsername[MAX]; "ejaira";
+char password [MAX];
+
+// generate a password
+char correctPassword[MAX]; "icecreamyummy";
+float p, r, t, accint, total;
+
+// provide username
+printf("Enter username: ");
+scanf("%s", username);
+
+// analyzing the username
+    if(strcmp(username, correctUsername) !=0)
+    {
+    printf("Can't recognize username. \n");
+    return 1;
+    // unrecognized username. go back to menu
+    }
+
+// provide password
+printf("Enter password: ");
+scanf("%s", password);
+
+// analyzing the password
+    if(strcmp(password, correctPassword) !=0)
+    {
+    printf("Password is incorrect. Don't be stupid. \n");
+    return 1;
+    //Incorrect password
+    }
+// Inputting and analyzing the inputs
+    printf("Enter the principal amount (p): ");
+    scanf("%f", &p);
+    printf("Enter rate (r): ");
+    scanf("%f", &r);
+    printf("Enter time period (t): ");
+    scanf("%f", &t);
+
+// Calculating the inputs
+    accint = p * (r/100)* t;
+    total = accint + p;
+
+    printf("Your total balance is: %.2f pesos");
+
+return 0;
+}
